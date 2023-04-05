@@ -1,0 +1,91 @@
+body {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-color: #282c34;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #ff2400;
+  font-family: "Courier New", Courier, monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 3em;
+  margin-top: 10px;
+  text-shadow: 0 0 10px #ff2400, 0 0 20px #ff2400, 0 0 30px #ff2400,
+    0 0 40px #ff2400, 0 0 50px #ff2400, 0 0 60px #ff2400, 0 0 70px #ff2400;
+}
+
+#drum-machine {
+  width: 400px;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #3a3d45;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto 1fr;
+  grid-gap: 10px;
+  justify-items: center;
+}
+
+#display {
+  grid-column: 1 / -1;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 24px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #4c4f5a;
+  color: #fff;
+}
+
+.drum-pad {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset -6px -6px rgba(0, 0, 0, 0.1);
+  transition: 0.2s ease-in-out;
+}
+
+.drum-pad:hover {
+  box-shadow: -6px -6px rgba(0, 0, 0, 0.1);
+}
+
+.drum-pad:focus {
+  outline: none;
+}
+
+.drum-pad:focus .clip {
+  display: block;
+}
+
+.clip {
+  display: none;
+}
+
+footer {
+  position: fixed;
+  color: lightgray;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+}
